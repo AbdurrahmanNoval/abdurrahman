@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Perpustakaan Online</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+      }
+      .navbar {
+        background-color: #6eb7ff;
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: white !important;
+      }
+      .navbar-brand img {
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      .nav-link:hover {
+        color: #ffc107 !important;
+      }
+
+      .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .login-card {
+        background-color: white;
+        padding: 40px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .login-card h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2rem;
+        color: #343a40;
+      }
+
+      .btn-primary {
+        background-color: #343a40;
+        border-color: #343a40;
+      }
+
+      .btn-primary:hover {
+        background-color: #ffc107;
+        border-color: #ffc107;
+      }
+
+      footer {
+        background-color: #6eb7ff;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      footer a {
+        color: #ffc107;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" a href="beranda.html">
+          <img src="logo.jpg" alt="Logo" />
+          Perpustakaan Abdurrahman
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" a href="beranda.html">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" a href="transaksi.html">Transaksi</a></li>
+            <li class="nav-item"><a class="nav-link" a href="profil.html">Profil</a></li>
+            <li class="nav-item"><a class="nav-link" a href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Form -->
+    <div class="login-container">
+      <div class="login-card">
+        <h2>Login - Perpustakaan Online</h2>
+        <form action="#" method="POST">
+          <!-- Username Input -->
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username" required />
+          </div>
+
+          <!-- Password Input -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password" required />
+          </div>
+
+          <!-- Submit Button -->
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+        </form>
+        <div class="text-center mt-3">
+          <a href="#">Lupa Password?</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Perpustakaan Online. Dibuat dengan <span style="color: #e25555">&#10084;</span> oleh Abdurrahman Noval.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Transaksi Peminjaman Buku</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+      }
+
+      .navbar {
+        background-color: #6eb7ff;
+      }
+      .navbar-brand img {
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: white !important;
+      }
+
+      .nav-link:hover {
+        color: #ffc107 !important;
+      }
+
+      .form-container {
+        margin-top: 50px;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        background-color: #6eb7ff;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" a href="beranda.html">
+          <img src="logo.jpg" alt="Logo" />
+          Perpustakaan Abdurrahman
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" a href="beranda.html">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" a href="transaksi.html">Transaksi</a></li>
+            <li class="nav-item"><a class="nav-link" a href="profil.html">Profil</a></li>
+            <li class="nav-item"><a class="nav-link" a href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Form Transaksi -->
+    <div class="container">
+      <div class="form-container">
+        <h2 class="text-center mb-4">Form Transaksi Peminjaman Buku</h2>
+        <form id="transactionForm">
+          <div class="mb-3">
+            <label for="memberName" class="form-label">Nama Peminjam</label>
+            <input type="text" class="form-control" id="memberName" placeholder="Masukkan nama peminjam" required />
+          </div>
+          <div class="mb-3">
+            <label for="bookTitle" class="form-label">Judul Buku</label>
+            <input type="text" class="form-control" id="bookTitle" placeholder="Masukkan judul buku" required />
+          </div>
+          <div class="mb-3">
+            <label for="borrowDate" class="form-label">Tanggal Peminjaman</label>
+            <input type="date" class="form-control" id="borrowDate" required />
+          </div>
+          <div class="mb-3">
+            <label for="returnDate" class="form-label">Tanggal Pengembalian</label>
+            <input type="date" class="form-control" id="returnDate" required />
+          </div>
+          <div class="mb-3">
+            <label for="notes" class="form-label">Catatan</label>
+            <textarea class="form-control" id="notes" rows="3" placeholder="Masukkan catatan tambahan (opsional)"></textarea>
+          </div>
+          <button type="button" class="btn btn-primary w-100" onclick="saveTransaction()">Simpan</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Perpustakaan Online. Dibuat dengan <span style="color: #e25555">&#10084;</span> oleh Abdurrahman Noval.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      function saveTransaction() {
+        const memberName = document.getElementById("memberName").value;
+        const bookTitle = document.getElementById("bookTitle").value;
+        const borrowDate = document.getElementById("borrowDate").value;
+        const returnDate = document.getElementById("returnDate").value;
+        const notes = document.getElementById("notes").value;
+
+        if (memberName && bookTitle && borrowDate && returnDate) {
+          alert(`Transaksi berhasil disimpan!\n\nNama Peminjam: ${memberName}\nJudul Buku: ${bookTitle}\nTanggal Peminjaman: ${borrowDate}\nTanggal Pengembalian: ${returnDate}\nCatatan: ${notes || "Tidak ada"}`);
+          document.getElementById("transactionForm").reset();
+        } else {
+          alert("Harap lengkapi semua bidang yang wajib diisi.");
+        }
+      }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

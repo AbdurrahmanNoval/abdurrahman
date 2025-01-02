@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perpustakaan Abdurrahman</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+      }
+
+      .navbar {
+        background-color: #6eb7ff;
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar-brand img {
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: white !important;
+      }
+
+      .nav-link:hover {
+        color: #ffc107 !important;
+      }
+
+      .hero {
+        background-color: #4e80b3;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .content-section {
+        padding: 40px 20px;
+      }
+
+      .card {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      footer {
+        background-color: #6eb7ff;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+      }
+
+      footer a {
+        color: #ffc107;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" a href="beranda.html">
+          <img src="logo.jpg" alt="Logo" />
+          Perpustakaan Abdurrahman
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" a href="beranda.html">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" a href="transaksi.html">Transaksi</a></li>
+            <li class="nav-item"><a class="nav-link" a href="profil.html">Profil</a></li>
+            <li class="nav-item"><a class="nav-link" a href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>Selamat Datang di Perpustakaan Abdurrahman</h1>
+    </div>
+
+    <!-- Content Section -->
+    <div class="container content-section" id="koleksi">
+      <h2 class="text-center mb-4">Koleksi Buku</h2>
+      <div class="row">
+        <!-- Book 1 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="cantik.jpg" width="300" height="400" class="card-img-top" alt="Buku 1" />
+            <div class="card-body">
+              <h5 class="card-title">Cantik Itu Luka</h5>
+              <p class="card-text">Penulis: Eka Kurniawan</p>
+              <a href="#" class="btn btn-primary">Detail</a>
+            </div>
+          </div>
+        </div>
+        <!-- Book 2 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="bumi.jpg" width="300" height="400" class="card-img-top" alt="Buku 2" />
+            <div class="card-body">
+              <h5 class="card-title">Bumi Manusia</h5>
+              <p class="card-text">Penulis: Pramoedya Ananta Toer</p>
+              <a href="#" class="btn btn-primary">Detail</a>
+            </div>
+          </div>
+        </div>
+        <!-- Book 3 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="dilan.jpg" width="300" height="400" class="card-img-top" alt="Buku 3" />
+            <div class="card-body">
+              <h5 class="card-title">Dilan</h5>
+              <p class="card-text">Penulis: Pidi Baiq</p>
+              <a href="#" class="btn btn-primary">Detail</a>
+            </div>
+          </div>
+        </div>
+        <!-- Book 4 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="tulis.jpg" width="300" height="400" class="card-img-top" alt="Buku 1" />
+            <div class="card-body">
+              <h5 class="card-title">Kisah Mengenai Madras</h5>
+              <p class="card-text">Penulis : Budi Darma</p>
+              <a href="#" class="btn btn-primary">Detail</a>
+            </div>
+          </div>
+        </div>
+        <!-- Book 5 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="kambing.jpg" width="300" height="400" class="card-img-top" alt="Buku 2" />
+            <div class="card-body">
+              <h5 class="card-title">Kambing Jantan</h5>
+              <p class="card-text">Penulis: Raditya Dika</p>
+              <a href="#" class="btn btn-primary">Detail</a>
+            </div>
+          </div>
+        </div>
+        <!-- Book 6 -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="kesatria.png" width="300" height="400" class="card-img-top" alt="Buku 3" />
+            <div class="card-body">
+              <h5 class="card-title">Supernova</h5>
+              <p class="card-text">Penulis: Dewi Lestari</p>
+              <a href="#" class="btn btn-primary">Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="container content-section" id="layanan">
+      <h2 class="text-center mb-4">Layanan Perpustakaan</h2>
+      <p class="text-center">Kami menyediakan berbagai layanan untuk mendukung pengalaman membaca Anda, seperti ruang baca, seminar, dan koleksi digital.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container content-section" id="kontak">
+      <h2 class="text-center mb-4">Hubungi Kami</h2>
+      <p class="text-center">Alamat: Jalan Jalan No. D3, Kota Literasi</p>
+      <p class="text-center">Email: abdurrahmannoval0194@gmail.com</p>
+      <p class="text-center">Telepon: 0821-24041571</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Perpustakaan Online. Dibuat dengan <span style="color: #e25555">&#10084;</span> oleh Abdurrahman Noval. <a href="#top">Kembali ke atas</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
